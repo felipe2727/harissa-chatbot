@@ -1,0 +1,22 @@
+{
+  "name": "harissa-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp ordering chatbot for Härissa Foods",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/formbody": "^8.0.1",
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "openai": "^6.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

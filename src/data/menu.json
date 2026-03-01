@@ -1,0 +1,888 @@
+{
+  "restaurant": {
+    "name": "Härissa Foods",
+    "tagline": "Modern Mediterranean Food",
+    "website": "www.harissafoods.com",
+    "instagram": "@harissafoods"
+  },
+  "menu": {
+    "mezzes": {
+      "category_name": "Mezzes",
+      "items": [
+        {
+          "id": "mz-01",
+          "name": "Hummus / Labneh",
+          "description": "Acompañado de pita chips o pan árabe.",
+          "price": 29900,
+          "tags": []
+        },
+        {
+          "id": "mz-02",
+          "name": "Tacos de Lomo al Tahine",
+          "description": "Acompañado de hummus y cebolla crispy.",
+          "price": 30900,
+          "tags": []
+        },
+        {
+          "id": "mz-03",
+          "name": "Falafel",
+          "description": "Acompañado de salsa tahine. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 30900 },
+            { "size": "Media", "price": 19900 }
+          ],
+          "tags": ["vegano"]
+        },
+        {
+          "id": "mz-04",
+          "name": "Baba Ganoush",
+          "description": "Acompañado de nuestra ensalada de pepino, tomate y almendras laminadas y pita chips o pan árabe.",
+          "price": 36900,
+          "tags": []
+        },
+        {
+          "id": "mz-05",
+          "name": "Kibbeh Crudo",
+          "description": "Acompañado de pita chips o pan árabe.",
+          "price": 39900,
+          "tags": []
+        },
+        {
+          "id": "mz-06",
+          "name": "Tahine Especial",
+          "description": "Acompañado de pita chips o pan árabe.",
+          "price": 39900,
+          "tags": []
+        },
+        {
+          "id": "mz-07",
+          "name": "Mezze Árabe",
+          "description": "Hummus tradicional y baba ganoush, acompañado de aceitunas y pan pita artesanal hecho en casa.",
+          "price": 42900,
+          "tags": ["nuevo"]
+        }
+      ]
+    },
+    "entradas": {
+      "category_name": "Entradas",
+      "items": [
+        {
+          "id": "en-01",
+          "name": "Mini Burguer",
+          "description": "Carne Certified Angus Beef, hummus, queso fundido y cebolla caramelizada.",
+          "price": 21900,
+          "tags": []
+        },
+        {
+          "id": "en-02",
+          "name": "Berenjenas Confeta",
+          "description": "Berenjenas al horno marinadas con bálsamico y hierbas frescas, queso feta y almendras laminadas.",
+          "price": 34900,
+          "tags": []
+        },
+        {
+          "id": "en-03",
+          "name": "Coliflor con Labneh y Zaatar",
+          "description": "Coliflor rostizada y confitada sobre una base de labneh, acompañada de dukkha de pistacho y zaatar.",
+          "price": 41900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "en-04",
+          "name": "Carpaccio Härissa",
+          "description": "Carpaccio de res encostrado en pimienta acompañado de dukkha de pistacho, queso parmesano, reducción de balsámico y tahini.",
+          "price": 44900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "en-05",
+          "name": "Burrata Trufada",
+          "description": "Burrata acompañada de tomate cherry confitado, gremolata y dukkha de pistacho, reducción de balsámico y miel de trufas.",
+          "price": 58900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "en-06",
+          "name": "Gravlax de Salmón",
+          "description": "Acompañado de labneh, reducción de balsámico de granada y dukkha de pistacho.",
+          "price": 60900,
+          "tags": ["nuevo"]
+        }
+      ]
+    },
+    "ensaladas": {
+      "category_name": "Ensaladas",
+      "items": [
+        {
+          "id": "es-01",
+          "name": "Griega",
+          "description": "Tomate, pepino, aceitunas, cebolla, queso feta y vinagreta de la casa.",
+          "price": 41900,
+          "tags": []
+        },
+        {
+          "id": "es-02",
+          "name": "Härissa",
+          "description": "Lechuga romana, tomate, pepino, cebolla, pan árabe tostado, con queso parmesano y vinagreta de la casa. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 41900 },
+            { "size": "Media", "price": 27900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "es-03",
+          "name": "Mediterránea",
+          "description": "Ensalada mediterránea.",
+          "price": 45900,
+          "tags": []
+        },
+        {
+          "id": "es-04",
+          "name": "Tabbouleh",
+          "description": "Tabbouleh tradicional. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 30900 },
+            { "size": "Media", "price": 20900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "es-05",
+          "name": "Reborn",
+          "description": "Ensalada de cogollo europeo, tomate, pepino y aderezo de la casa a base de yogurt griego y feta, lomo al tahine con cebolla grillada, hummus tradicional, aguacate y pita chips horneadas.",
+          "price": 59900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "es-06",
+          "name": "Caesar Chiken Feta",
+          "description": "Cogollo europeo, pechuga de pollo, queso parmesano, pita chips horneadas, dátiles y aderezo de la casa a base de queso feta y yogurt griego.",
+          "price": 58900,
+          "tags": ["nuevo"]
+        }
+      ],
+      "adicion_proteina": [
+        { "name": "Falafel", "price": 8900 },
+        { "name": "Kibbeh Frito u Horneado", "price": 16900 },
+        { "name": "Pechuga de Pollo al Limón", "price": 16900 },
+        { "name": "Honey Härissa Chicken", "price": 19900, "tags": ["nuevo"] },
+        { "name": "Lomo al Tahine", "price": 26900 }
+      ]
+    },
+    "bowls": {
+      "category_name": "Bowls",
+      "note": "Acompañados con pita chips",
+      "predefined": [
+        {
+          "id": "bw-01",
+          "name": "Vegano",
+          "description": "Arroz de cúrcuma, doble hummus tradicional, falafel, tomate cherry, aguacate, cebolla encurtida y garbanzos crocantes.",
+          "price": 49900,
+          "tags": ["vegano"]
+        },
+        {
+          "id": "bw-02",
+          "name": "Griego",
+          "description": "Mix de lechugas, hummus tradicional, labneh, pechuga de pollo al limón, pepino-tomate, aguacate y queso feta.",
+          "price": 57900,
+          "tags": []
+        },
+        {
+          "id": "bw-03",
+          "name": "Härissa",
+          "description": "Marmaón con salsa de pollo, hummus tradicional, labneh, hojitas de parra y kibbeh al horno.",
+          "price": 57900,
+          "tags": []
+        },
+        {
+          "id": "bw-04",
+          "name": "Árabe",
+          "description": "Arroz de almendra, hummus tradicional, labneh, kibbeh, pepino-tomate y aguacate.",
+          "price": 59900,
+          "tags": []
+        },
+        {
+          "id": "bw-05",
+          "name": "Lomo al Tahine",
+          "description": "Lentejas con cebolla caramelizada, hummus tradicional, labneh, lomo al tahine, tomate cherry y cebolla crispy.",
+          "price": 57900,
+          "tags": []
+        },
+        {
+          "id": "bw-06",
+          "name": "Honey Härissa Chicken",
+          "description": "Arroz de cúrcuma, pollo honey harissa, hummus, babaganoush, aguacate, cebolla encurtida y ensaladilla de tomate pepino con queso feta.",
+          "price": 57900,
+          "tags": ["nuevo"]
+        }
+      ],
+      "arma_tu_bowl": {
+        "label": "Arma tu Bowl",
+        "note": "Acompañados con pita chips. Elige 1 base, 1 proteína, 2 dips y toppings incluidos (extras con costo adicional).",
+        "step_1_base": {
+          "label": "Elige 1 base",
+          "options": [
+            { "name": "Arroz de Cúrcuma", "price": 27900 },
+            { "name": "Mix de Lechugas", "price": 27900 },
+            { "name": "Lentejas & Cebolla Caramelizada", "price": 27900 },
+            { "name": "Arroz de Almendra", "price": 33900 },
+            { "name": "Marmaón + Salsa", "price": 36900 }
+          ]
+        },
+        "step_2_proteina": {
+          "label": "Elige 1 proteína",
+          "options": [
+            { "name": "Falafel", "price": 22900 },
+            { "name": "Kibbeh Frito u Horneado", "price": 27900 },
+            { "name": "Pollo al Limón", "price": 27900 },
+            { "name": "Repollos & Hojitas de Parra", "price": 27900 },
+            { "name": "Honey Härissa Chicken", "price": 31900 },
+            { "name": "Lomo al Tahine", "price": 33900 }
+          ]
+        },
+        "step_3_dips": {
+          "label": "Elige 2 dips (incluidos)",
+          "options": [
+            { "name": "Hummus Tradicional" },
+            { "name": "Labneh" },
+            { "name": "Baba Ganoush" }
+          ]
+        },
+        "toppings_incluidos": [
+          "Cebolla Encurtida",
+          "Tomate Cherry",
+          "Tomate & Pepino",
+          "Mix de Lechugas",
+          "Cebolla Crispy",
+          "Repollo Encurtido"
+        ],
+        "toppings_extra": [
+          { "name": "Aguacate", "price": 1900 },
+          { "name": "Tabbouleh", "price": 2900 },
+          { "name": "Aceitunas", "price": 3900 },
+          { "name": "Queso Feta", "price": 3900 }
+        ],
+        "salsas": {
+          "label": "Elige salsa",
+          "options": ["Tahini", "Härissa", "Tzatziki"]
+        }
+      }
+    },
+    "wraps": {
+      "category_name": "Wraps",
+      "items": [
+        {
+          "id": "wr-01",
+          "name": "Wrap Falafel",
+          "description": "Hummus tradicional, pepino, tomate, repollo encurtido y tahini.",
+          "price": 37900,
+          "tags": ["vegano"]
+        },
+        {
+          "id": "wr-02",
+          "name": "Wrap Pollo",
+          "description": "Pollo, hummus, tomate, pepino, repollo encurtido y tahini.",
+          "price": 46900,
+          "tags": []
+        },
+        {
+          "id": "wr-03",
+          "name": "Wrap Mixto",
+          "description": "Carne y pollo, hummus, tomate, pepino, repollo encurtido y tahini.",
+          "price": 45900,
+          "tags": []
+        },
+        {
+          "id": "wr-04",
+          "name": "Wrap Carne",
+          "description": "Carne, hummus, tomate, cebolla summac, repollo encurtido y tahini.",
+          "price": 50900,
+          "tags": []
+        }
+      ],
+      "extras": {
+        "combo_papas_fritas": 8900
+      },
+      "toppings": [
+        { "name": "Salsa Tahini", "price": 2500 },
+        { "name": "Salsa Tzatziki", "price": 2500 },
+        { "name": "Tomate", "price": 3900 },
+        { "name": "Pepino", "price": 3900 },
+        { "name": "Cebolla Summac", "price": 8900 }
+      ]
+    },
+    "para_compartir": {
+      "category_name": "Para Compartir",
+      "items": [
+        {
+          "id": "pc-01",
+          "name": "Arroz de Cúrcuma",
+          "description": "Arroz de cúrcuma. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 19900 },
+            { "size": "Media", "price": 14900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-02",
+          "name": "Lentejas con Cebolla Crispy",
+          "description": "Lentejas con fideos y cebolla crispy. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 29900 },
+            { "size": "Media", "price": 19900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-03",
+          "name": "Kibbeh Frito u Horneado",
+          "description": "Kibbeh frito u horneado. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 39900 },
+            { "size": "Media", "price": 26900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-04",
+          "name": "Honey Härissa Chicken",
+          "description": "Honey Härissa Chicken. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 44900 },
+            { "size": "Media", "price": 22900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-05",
+          "name": "Hojas de Parra",
+          "description": "Hojas de parra. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 45900 },
+            { "size": "Media", "price": 28900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-06",
+          "name": "Repollos",
+          "description": "Repollos. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 45900 },
+            { "size": "Media", "price": 28900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-07",
+          "name": "Arroz de Almendra",
+          "description": "Arroz de almendra. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 46900 },
+            { "size": "Media", "price": 27900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-08",
+          "name": "Marmaón",
+          "description": "Marmaón. (G: Grande - M: Media)",
+          "variants": [
+            { "size": "Grande", "price": 48900 },
+            { "size": "Media", "price": 32900 }
+          ],
+          "tags": []
+        },
+        {
+          "id": "pc-09",
+          "name": "Lomo al Tahine",
+          "description": "Lomo de res en salsa tahine y cebolla crispy.",
+          "variants": [
+            { "size": "330 gr", "price": 85900 },
+            { "size": "220 gr", "price": 53900 }
+          ],
+          "tags": []
+        }
+      ]
+    },
+    "picadas": {
+      "category_name": "Picadas",
+      "items": [
+        {
+          "id": "pi-01",
+          "name": "Árabe",
+          "description": "Hojitas de parra, repollitos, kibbeh, falafel, tabbouleh, hummus, labneh, baba ganoush y pita chips.",
+          "price": 112900,
+          "tags": []
+        },
+        {
+          "id": "pi-02",
+          "name": "Härissa",
+          "description": "Arroz de almendra, lomo al tahine, kibbeh, falafel, tabbouleh, hojitas de parra, repollitos, hummus, labneh, baba ganoush y pita chips.",
+          "price": 119900,
+          "tags": []
+        }
+      ]
+    },
+    "parrilla": {
+      "category_name": "Parrilla",
+      "items": [
+        {
+          "id": "pa-01",
+          "name": "Pollo Mediterráneo",
+          "description": "Medio pollo mediterráneo acompañado de hummus y ensaladilla de tomate pepino.",
+          "price": 55900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "pa-02",
+          "name": "Kafta con Pistacho",
+          "description": "Chuzos de kafta con pistachos acompañados de hummus, ensaladilla de tomate pepino y arroz de cúrcuma o pan pita.",
+          "price": 55900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "pa-03",
+          "name": "Chuzo de Pollo",
+          "description": "Chuzo de pollo con gremolata de pistacho, acompañado de hummus, ensaladilla de tomate pepino y arroz de cúrcuma o pan pita.",
+          "price": 49900,
+          "tags": []
+        },
+        {
+          "id": "pa-04",
+          "name": "Chuzo de Carne",
+          "description": "Chuzo de lomo, acompañado de hummus, ensaladilla de tomate pepino y arroz de cúrcuma o pan pita.",
+          "price": 67900,
+          "tags": []
+        }
+      ]
+    },
+    "shawarmas_pan_pita": {
+      "category_name": "Shawarmas en Pan Pita",
+      "items": [
+        {
+          "id": "sp-01",
+          "name": "Falafel",
+          "description": "Hummus, tomate, pepino, repollo encurtido, berenjenas y tahini.",
+          "price": 37900,
+          "tags": ["vegano"]
+        },
+        {
+          "id": "sp-02",
+          "name": "Pollo",
+          "description": "Hummus, tomate, pepino, repollo encurtido, berenjenas y tahini.",
+          "price": 44900,
+          "tags": []
+        },
+        {
+          "id": "sp-03",
+          "name": "Griego",
+          "description": "Pollo, tomate, pepino, cebolla, queso feta, repollo encurtido y tzatziki.",
+          "price": 45900,
+          "tags": []
+        },
+        {
+          "id": "sp-04",
+          "name": "Mixto",
+          "description": "Carne, pollo, hummus, tomate, cebolla summac y tahini, repollo encurtido y tahini.",
+          "price": 45900,
+          "tags": []
+        },
+        {
+          "id": "sp-05",
+          "name": "Carne",
+          "description": "Hummus, tomate, cebolla summac, repollo encurtido y tahini.",
+          "price": 49900,
+          "tags": []
+        }
+      ],
+      "extras": {
+        "combo_papas_fritas": 8900
+      }
+    },
+    "crispy_shawarma": {
+      "category_name": "Crispy Shawarma",
+      "description": "Hummus, repollo encurtido, cebolla summac, hierbabuena, perejil y salsa de granada. Acompañado de salsa de tahini o de ajo (a elección).",
+      "items": [
+        {
+          "id": "cs-01",
+          "name": "Pollo",
+          "price": 46900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "cs-02",
+          "name": "Falafel",
+          "price": 40900,
+          "tags": ["nuevo", "vegano"]
+        },
+        {
+          "id": "cs-03",
+          "name": "Mixto",
+          "price": 48900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "cs-04",
+          "name": "Carne",
+          "price": 50900,
+          "tags": ["nuevo"]
+        }
+      ],
+      "extras": {
+        "combo_papas_fritas": 8900
+      }
+    },
+    "arma_tu_shawarma": {
+      "category_name": "Arma tu Shawarma",
+      "note": "Personaliza tu shawarma paso a paso.",
+      "step_1_proteina": {
+        "label": "Elige 1 proteína",
+        "options": [
+          { "name": "Falafel", "price": 38900 },
+          { "name": "Pollo", "price": 45900 },
+          { "name": "Mixto (Pollo/Carne)", "price": 46900 },
+          { "name": "Carne", "price": 50900 }
+        ]
+      },
+      "step_2_dip": {
+        "label": "Elige 1 dip",
+        "options": [
+          { "name": "Hummus Tradicional" },
+          { "name": "Baba Ganoush" },
+          { "name": "Tzatziki" }
+        ]
+      },
+      "step_3_toppings": {
+        "label": "Elige 3 toppings (incluidos)",
+        "incluidos": [
+          "Pepino",
+          "Tomate",
+          "Mix de Lechugas",
+          "Repollo Encurtido",
+          "Cebolla Summac",
+          "Berenjenas Horneadas",
+          "Cebolla Caramelizada"
+        ],
+        "extras": [
+          { "name": "Cebolla Crispy", "price": 2500 },
+          { "name": "Tabbouleh", "price": 2500 },
+          { "name": "Aceitunas", "price": 3900 },
+          { "name": "Queso Feta", "price": 3900 },
+          { "name": "Papas Fritas (adentro)", "price": 8900 }
+        ]
+      },
+      "salsas": {
+        "label": "Elige salsa",
+        "options": ["Tahini", "Härissa", "Tzatziki"]
+      },
+      "extras_adicionales": {
+        "aji_picante": "Ají picante",
+        "pepinillos_encurtidos": "Pepinillos encurtidos"
+      }
+    },
+    "hamburguesas": {
+      "category_name": "Hamburguesa Härissa",
+      "items": [
+        {
+          "id": "hb-01",
+          "name": "Keto Burger",
+          "description": "Lechuga crespa verde, lechuga romana, tomate, cebolla caramelizada, tocineta, salsa tahine, doble carne y doble queso Kraft.",
+          "price": 43900,
+          "tags": []
+        },
+        {
+          "id": "hb-02",
+          "name": "Hamburguesa Härissa",
+          "description": "130 gr certified angus, hummus, tomate, lechuga, queso fundido y cebolla caramelizada.",
+          "price": 44900,
+          "tags": []
+        }
+      ],
+      "adiciones": [
+        { "name": "Extra Ceb. Caram.", "price": 2900 },
+        { "name": "Extra Queso", "price": 4200 },
+        { "name": "Tocineta", "price": 6900 },
+        { "name": "Extra Carne 130 gr", "price": 17900 }
+      ],
+      "extras": {
+        "combo_papas_fritas": 8900
+      }
+    },
+    "sides": {
+      "category_name": "Sides",
+      "items": [
+        {
+          "id": "sd-01",
+          "name": "Pan Pita Artesanal (Unidad)",
+          "price": 4900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "sd-02",
+          "name": "Pan Pita Artesanal (Paquete)",
+          "price": 13900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "sd-03",
+          "name": "Pita Chips",
+          "price": 5900,
+          "tags": []
+        },
+        {
+          "id": "sd-04",
+          "name": "Papas Fritas Härissa",
+          "price": 8900,
+          "tags": []
+        }
+      ]
+    },
+    "postres": {
+      "category_name": "Postres",
+      "items": [
+        {
+          "id": "po-01",
+          "name": "Pañoleta de Guayaba",
+          "price": 9900,
+          "tags": []
+        },
+        {
+          "id": "po-02",
+          "name": "Celerí de Nueces",
+          "price": 9900,
+          "tags": []
+        },
+        {
+          "id": "po-03",
+          "name": "Baklava de Nueces",
+          "price": 10900,
+          "tags": []
+        },
+        {
+          "id": "po-04",
+          "name": "Torta de Chocolate",
+          "price": 15900,
+          "tags": []
+        },
+        {
+          "id": "po-05",
+          "name": "Dubai Chocolate Ice Cream",
+          "price": 27900,
+          "tags": ["nuevo"]
+        },
+        {
+          "id": "po-06",
+          "name": "Helado Crocante de Caramelo",
+          "price": 19500,
+          "tags": []
+        },
+        {
+          "id": "po-07",
+          "name": "Niña Diana",
+          "price": 22900,
+          "tags": []
+        },
+        {
+          "id": "po-08",
+          "name": "Rollo de Helado Crocante con Caramelo",
+          "price": 21900,
+          "tags": []
+        },
+        {
+          "id": "po-09",
+          "name": "Baklava de Pistacho",
+          "price": 22500,
+          "tags": []
+        },
+        {
+          "id": "po-10",
+          "name": "Helado de Vainilla (adicional)",
+          "price": 7500,
+          "tags": []
+        }
+      ]
+    },
+    "te_y_cafe": {
+      "category_name": "Té y Café",
+      "items": [
+        { "id": "tc-01", "name": "Espresso", "price": 7900 },
+        { "id": "tc-02", "name": "Americano", "price": 8900 },
+        { "id": "tc-03", "name": "Macchiato", "price": 8900 },
+        { "id": "tc-04", "name": "Cappuccino", "price": 8900 },
+        { "id": "tc-05", "name": "Té de la Casa", "price": 16900 },
+        { "id": "tc-06", "name": "Frappuccino Arequipe/Chocolate", "price": 14900 },
+        { "id": "tc-07", "name": "Matcha Latte", "price": 25900 },
+        { "id": "tc-08", "name": "Affogato", "price": 16900 }
+      ]
+    },
+    "bebidas_frias": {
+      "category_name": "Bebidas Frías",
+      "sodas_de_la_casa": [
+        { "id": "bf-01", "name": "Lychee", "price": 18900 },
+        { "id": "bf-02", "name": "Sandía", "price": 18900 },
+        { "id": "bf-03", "name": "Jengibre", "price": 18900 }
+      ],
+      "limonadas": [
+        { "id": "bf-04", "name": "Coco", "price": 18900 },
+        { "id": "bf-05", "name": "Lychee", "price": 18500 },
+        { "id": "bf-06", "name": "Cerezada", "price": 15500 },
+        { "id": "bf-07", "name": "Hierbabuena", "price": 15500 },
+        { "id": "bf-08", "name": "Natural", "price": 13900 }
+      ],
+      "bebidas": [
+        { "id": "bf-09", "name": "Hatsu Té", "price": 14900 },
+        { "id": "bf-10", "name": "Hatsu Soda", "price": 11900 },
+        { "id": "bf-11", "name": "Soda", "price": 9500 },
+        { "id": "bf-12", "name": "Gaseosa", "price": 9500 },
+        { "id": "bf-13", "name": "Agua", "price": 8900 },
+        { "id": "bf-14", "name": "Jugos", "price": 13900 }
+      ],
+      "cervezas": [
+        { "id": "bf-15", "name": "BBC", "price": 15900 },
+        { "id": "bf-16", "name": "Stella Artois", "price": 14900 },
+        { "id": "bf-17", "name": "Corona", "price": 14900 },
+        { "id": "bf-18", "name": "Club Colombia", "price": 12900 },
+        { "id": "bf-19", "name": "Cusqueña", "price": 15900 }
+      ]
+    },
+    "licores": {
+      "category_name": "Licores",
+      "whisky": [
+        { "name": "Buchanan's 18", "trago": 99900, "botella": 869900 },
+        { "name": "Buchanan's Master", "trago": 49900, "botella": 439900 },
+        { "name": "Glenlivet 12", "trago": 49900, "botella": 429900 },
+        { "name": "Buchanan's 12", "trago": 44900, "botella": 399900 },
+        { "name": "Singleton 12", "trago": 44900, "botella": 399900 },
+        { "name": "Old Parr 12", "trago": 39900, "botella": 399900 }
+      ],
+      "gin": [
+        { "name": "Bulldog", "trago": 59900, "botella": 454900 },
+        { "name": "Tanqueray", "trago": 39900, "botella": 359900 },
+        { "name": "Gordon's", "trago": 29900, "botella": 199900 }
+      ],
+      "tequila": [
+        { "name": "Don Julio 70", "trago": 94900, "botella": 849900 },
+        { "name": "Maestro Dobel", "trago": 79900, "botella": 714900 },
+        { "name": "Don Julio Rep.", "trago": 79900, "botella": 709900 },
+        { "name": "Don Julio Blanco", "trago": 59900, "botella": 399900 },
+        { "name": "Centenario Reposado", "trago": 34900, "botella": 304900 }
+      ],
+      "mezcal": [
+        { "name": "400 Conejos", "trago": 59900, "botella": 499900 }
+      ],
+      "vodka": [
+        { "name": "Grey Goose", "trago": 64900, "botella": 524900 },
+        { "name": "Absolut", "trago": 29900, "botella": 209900 }
+      ],
+      "ron": [
+        { "name": "Zacapa 23", "trago": 74900, "botella": 639900 }
+      ],
+      "digestivo": [
+        { "name": "Cointreau", "trago": 39900, "botella": 344900 },
+        { "name": "Licor 43", "trago": 39900, "botella": 344900 },
+        { "name": "Amaretto", "trago": 39900, "botella": 344900 },
+        { "name": "Frangelico", "trago": 39900, "botella": 344900 },
+        { "name": "Limoncello", "trago": 39900, "botella": 344900 }
+      ]
+    },
+    "cocktails": {
+      "category_name": "Cocktails",
+      "de_la_casa": [
+        {
+          "id": "ck-01",
+          "name": "Harissa Spicy",
+          "description": "Mezcal 400 Conejos, miel de agave, picante, sal de casa.",
+          "price": 69900
+        },
+        {
+          "id": "ck-02",
+          "name": "Limoncello Spritz",
+          "description": "Limoncello, prosecco, licor 43 y zumo de limón.",
+          "price": 55900
+        },
+        {
+          "id": "ck-03",
+          "name": "Cinnamon Mezcal Margarita",
+          "description": "Mezcal 400 Conejos, Tequila Centenario, toronja macerada y notas de canela.",
+          "price": 51900
+        },
+        {
+          "id": "ck-04",
+          "name": "Green Sunny",
+          "description": "Campari, Ginebra Gordon's, miel de agave y uva verde macerada.",
+          "price": 38900
+        },
+        {
+          "id": "ck-05",
+          "name": "TSP / Tequila Sweet Paprika",
+          "description": "Tequila Centenario, pimentones rojos caramelizados, zumo de limón y sal de la casa.",
+          "price": 34900
+        }
+      ],
+      "clasicos": [
+        { "id": "ck-06", "name": "Gin Tonic Bulldog", "price": 49900 },
+        { "id": "ck-07", "name": "Negroni", "price": 39900 },
+        { "id": "ck-08", "name": "Pisco Sour", "price": 38900 },
+        { "id": "ck-09", "name": "Gin Tonic Tanqueray", "price": 37900 },
+        { "id": "ck-10", "name": "Aperol Spritz", "price": 37900 },
+        { "id": "ck-11", "name": "Margarita", "price": 36900 },
+        { "id": "ck-12", "name": "Carajillo", "price": 32900 },
+        { "id": "ck-13", "name": "Moscow Mule", "price": 32900 },
+        { "id": "ck-14", "name": "Mojito Cubano", "price": 31900 }
+      ]
+    },
+    "mocktails": {
+      "category_name": "Mocktails",
+      "items": [
+        { "id": "mk-01", "name": "Toronja", "price": 37900 },
+        { "id": "mk-02", "name": "Kiwi", "price": 27900 },
+        { "id": "mk-03", "name": "Berries", "price": 37900 }
+      ]
+    },
+    "vinos": {
+      "category_name": "Vinos & Sangrías",
+      "tinto": [
+        { "name": "Languedoc - Francia", "description": "Blend francés elegante, especiado y estructurado.", "price": 239900 },
+        { "name": "Montes - Chile", "description": "Merlot suave, con notas de frutas maduras.", "price": 204900 },
+        { "name": "Celia Reserva - Argentina", "description": "Malbec con cuerpo, ideal para carnes rojas.", "price": 189900 },
+        { "name": "Mucho Más - España", "description": "Blend español intenso y frutal.", "price": 169900 },
+        { "name": "Finca Las Moras - Argentina", "description": "Malbec fácil de tomar, con notas de ciruela.", "price": 154900 },
+        { "name": "Andean Vineyards - Argentina", "description": "Malbec joven, fresco y ligero.", "price": 114900 },
+        { "name": "Livana - Chile", "description": "Carmenere suave, con toques especiados.", "price": 114900 }
+      ],
+      "blanco": [
+        { "name": "Mar de Frades - España", "description": "Albariño fresco y salino.", "price": 319900 },
+        { "name": "Ramon Bilbao - España", "description": "Verdejo aromático, con notas cítricas.", "price": 194900 },
+        { "name": "Finca Las Moras - Argentina", "description": "Chardonnay frutal, con buena estructura.", "price": 169900 },
+        { "name": "Analivia - España", "description": "Verdejo ligero y floral, muy versátil.", "price": 164900 },
+        { "name": "Santa Carolina - Chile", "description": "Sauvignon Blanc refrescante y herbal.", "price": 154900 },
+        { "name": "Andean - Argentina", "description": "Chardonnay suave, ideal como aperitivo.", "price": 114900 },
+        { "name": "Livana - Chile", "description": "Sauvignon Blanc fresco y muy bebible.", "price": 114900 }
+      ],
+      "botella_personal_187ml": [
+        { "name": "Jaume Serra Brut - España", "description": "Espumoso español seco, ideal para brindar.", "price": 48900 },
+        { "name": "Finca Las Moras - Argentina", "description": "Malbec joven y suave.", "price": 45900 },
+        { "name": "Santa Carolina Reservado - Chile", "description": "Sauvignon Blanc ligero y refrescante.", "price": 42900 }
+      ],
+      "rosado": [
+        { "name": "Finca Las Moras - Argentina", "description": "Syrah rosado, afrutado y vibrante.", "price": 169900 },
+        { "name": "Santa Carolina - Chile", "description": "Rosado de Cabernet, fresco y delicado.", "price": 139900 }
+      ],
+      "espumantes": [
+        { "name": "Mionetto - Italia", "description": "Prosecco italiano seco y elegante.", "price": 209900 },
+        { "name": "Piccini - Italia", "description": "Lambrusco rosado, afrutado y refrescante.", "price": 154900 },
+        { "name": "Moelia Brut - Francia", "description": "Espumoso francés ligero y equilibrado.", "price": 149900 }
+      ],
+      "sangria": [
+        { "name": "Vino Tinto", "description": "Refrescante y afrutada.", "price": 129900 },
+        { "name": "Vino Blanco", "description": "Ligera y cítrica.", "price": 129900 },
+        { "name": "Vino Rosado", "description": "Dulce y frutal.", "price": 129900 }
+      ]
+    }
+  },
+  "currency": "COP",
+  "price_note": "Todos los precios están en pesos colombianos (COP)"
+}
