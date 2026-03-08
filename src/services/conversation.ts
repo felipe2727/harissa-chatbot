@@ -1,7 +1,7 @@
 import { qdrant, C } from '../lib/qdrant'
 import { ConversationSession, Message, OrderState } from '../types'
 
-const SESSION_TTL = 30 * 60 * 1000 // 30 minutes
+const SESSION_TTL = 2 * 60 * 60 * 1000 // 2 hours
 
 function isActive(lastActivity: number): boolean {
   return Date.now() - lastActivity < SESSION_TTL

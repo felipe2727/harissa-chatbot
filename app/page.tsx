@@ -28,6 +28,13 @@ export default function ChatPage() {
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
+  function resetConversation() {
+    localStorage.removeItem('harissa_session_id')
+    setMessages([{ role: 'bot', content: GREETING }])
+    setInput('')
+    inputRef.current?.focus()
+  }
+
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
@@ -72,7 +79,9 @@ export default function ChatPage() {
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.logo}>🌿 Härissa Foods</span>
-        <span style={styles.headerSub}>Asistente virtual</span>
+        <button style={styles.resetBtn} onClick={resetConversation}>
+          Nueva conversación
+        </button>
       </div>
 
       {/* Messages */}
@@ -203,6 +212,15 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#fff',
     fontSize: 15,
     fontWeight: 600,
+    cursor: 'pointer',
+  },
+  resetBtn: {
+    fontSize: 12,
+    color: '#aaa',
+    background: 'transparent',
+    border: '1px solid #444',
+    borderRadius: 12,
+    padding: '4px 10px',
     cursor: 'pointer',
   },
 }
