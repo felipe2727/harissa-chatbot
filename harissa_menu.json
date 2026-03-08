@@ -3,7 +3,18 @@
     "name": "Härissa Foods",
     "tagline": "Modern Mediterranean Food",
     "website": "www.harissafoods.com",
-    "instagram": "@harissafoods"
+    "instagram": "@harissafoods",
+    "phone": "+57 312 8379713",
+    "locations": [
+      { "name": "Barranquilla – Calle 79", "address": "Cl. 79 51-72, Barranquilla" },
+      { "name": "Barranquilla – Mallplaza", "address": "Mallplaza piso 4, Barranquilla" },
+      { "name": "Cartagena", "address": "Cl. 7 2-71, Cartagena" }
+    ],
+    "hours": {
+      "lunes_miercoles_domingo": "11:30–21:00",
+      "jueves": "11:30–22:00",
+      "viernes_sabado": "11:30–23:00"
+    }
   },
   "menu": {
     "mezzes": {

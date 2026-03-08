@@ -1,47 +1,71 @@
-import { ConversationSession, Message, OrderState } from '../types';
+import { qdrant, C } from '../lib/qdrant'
+import { ConversationSession, Message, OrderState } from '../types'
 
-const SESSION_TTL = 30 * 60 * 1000; // 30 minutes
-const sessions = new Map<string, ConversationSession>();
+const SESSION_TTL = 30 * 60 * 1000 // 30 minutes
 
-export function getOrCreateSession(phoneNumber: string): ConversationSession {
-  const existing = sessions.get(phoneNumber);
-  if (existing && Date.now() - existing.lastActivity < SESSION_TTL) {
-    existing.lastActivity = Date.now();
-    return existing;
+function isActive(lastActivity: number): boolean {
+  return Date.now() - lastActivity < SESSION_TTL
+}
+
+export async function getOrCreateSession(
+  sessionId: string
+): Promise<ConversationSession> {
+  try {
+    const result = await qdrant.retrieve(C.sessions, {
+      ids: [sessionId],
+      with_payload: true,
+    })
+
+    if (result.length > 0 && result[0].payload) {
+      const session = result[0].payload as unknown as ConversationSession
+      if (isActive(session.lastActivity)) {
+        return session
+      }
+    }
+  } catch (err) {
+    console.error('[conversation] retrieve error:', err)
   }
 
+  // Create fresh session
   const session: ConversationSession = {
-    phoneNumber,
+    sessionId,
     messages: [],
     currentOrder: { items: [], total: 0, status: 'building' },
     lastActivity: Date.now(),
-  };
-  sessions.set(phoneNumber, session);
-  return session;
+  }
+  await saveSession(session)
+  return session
 }
 
-export function addMessage(
-  session: ConversationSession,
+async function saveSession(session: ConversationSession): Promise<void> {
+  await qdrant.upsert(C.sessions, {
+    points: [
+      {
+        id: session.sessionId,
+        vector: [0.0],
+        payload: session as unknown as Record<string, unknown>,
+      },
+    ],
+  })
+}
+
+export async function addMessage(
+  sessionId: string,
   role: Message['role'],
   content: string
-): void {
-  session.messages.push({ role, content });
-  session.lastActivity = Date.now();
+): Promise<void> {
+  const session = await getOrCreateSession(sessionId)
+  session.messages.push({ role, content })
+  session.lastActivity = Date.now()
+  await saveSession(session)
 }
 
-export function updateOrder(
-  session: ConversationSession,
+export async function updateOrder(
+  sessionId: string,
   order: OrderState
-): void {
-  session.currentOrder = order;
+): Promise<void> {
+  const session = await getOrCreateSession(sessionId)
+  session.currentOrder = order
+  session.lastActivity = Date.now()
+  await saveSession(session)
 }
-
-// Clean up expired sessions every 5 minutes
-setInterval(() => {
-  const now = Date.now();
-  for (const [key, session] of sessions) {
-    if (now - session.lastActivity > SESSION_TTL) {
-      sessions.delete(key);
-    }
-  }
-}, 5 * 60 * 1000);
