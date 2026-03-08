@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Save reservation request to Qdrant
-    if (parsed.reservation_request && parsed.reservation_request.customer_name) {
+    if (parsed.reservation_request && parsed.reservation_request.customerName) {
       const res = parsed.reservation_request
       const reservation: Omit<Reservation, 'sessionId'> & { session_id: string; created_at: string } = {
         session_id: sessionId,
