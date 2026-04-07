@@ -1,5 +1,5 @@
 import { OrderState, OrderItem } from '../types';
-import { findItemById, getItemPrice, getModifierPrice } from '../utils/validators';
+import { findItemById, getItemPrice, getModifierPrice, isValidCustomBasePrice } from '../utils/validators';
 
 export function validateOrder(llmOrder: OrderState): OrderState {
   const validatedItems: OrderItem[] = [];
@@ -22,10 +22,12 @@ export function validateOrder(llmOrder: OrderState): OrderState {
         return { name: mod.name, price: safePrice };
       });
 
-      const subtotal = modifierTotal * item.quantity;
+      // Validate unit_price (protein/base price) against known menu prices
+      const validBasePrice = isValidCustomBasePrice(item.id, item.unit_price) ? item.unit_price : 0;
+      const subtotal = (validBasePrice + modifierTotal) * item.quantity;
       validatedItems.push({
         ...item,
-        unit_price: 0,
+        unit_price: validBasePrice,
         modifiers: validatedModifiers,
         subtotal,
       });

@@ -167,6 +167,15 @@ export function getModifierPrice(name: string): number | undefined {
   return modifierIndex.get(name.toLowerCase())
 }
 
+/** Check if a unit_price matches any known base price for a custom item type */
+export function isValidCustomBasePrice(itemId: string, price: number): boolean {
+  const prefix = itemId === 'custom-bowl' ? 'bowl:' : 'shawarma:'
+  for (const [key, val] of modifierIndex) {
+    if (key.startsWith(prefix) && val === price) return true
+  }
+  return false
+}
+
 export function isIndexBuilt(): boolean {
   return indexBuilt
 }
