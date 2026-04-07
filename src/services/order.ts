@@ -6,22 +6,26 @@ export function validateOrder(llmOrder: OrderState): OrderState {
   let total = 0;
 
   for (const item of llmOrder.items) {
-    // Custom builder items: validate component prices individually
+    // Custom builder items: all pricing comes from validated modifiers, not LLM unit_price
     if (item.id === 'custom-bowl' || item.id === 'custom-shawarma') {
       let modifierTotal = 0;
       const validatedModifiers = item.modifiers.map((mod) => {
         const prefix = item.id === 'custom-bowl' ? 'bowl:' : 'shawarma:';
         const realPrice =
           getModifierPrice(prefix + mod.name.toLowerCase()) ??
-          getModifierPrice(mod.name.toLowerCase()) ??
-          mod.price;
-        modifierTotal += realPrice;
-        return { name: mod.name, price: realPrice };
+          getModifierPrice(mod.name.toLowerCase());
+        if (realPrice === undefined) {
+          console.warn(`[order] Unknown modifier rejected: "${mod.name}" for ${item.id}`);
+        }
+        const safePrice = realPrice ?? 0;
+        modifierTotal += safePrice;
+        return { name: mod.name, price: safePrice };
       });
 
-      const subtotal = (item.unit_price + modifierTotal) * item.quantity;
+      const subtotal = modifierTotal * item.quantity;
       validatedItems.push({
         ...item,
+        unit_price: 0,
         modifiers: validatedModifiers,
         subtotal,
       });
@@ -37,9 +41,13 @@ export function validateOrder(llmOrder: OrderState): OrderState {
 
     let modifierTotal = 0;
     const validatedModifiers = item.modifiers.map((mod) => {
-      const realModPrice = getModifierPrice(mod.name.toLowerCase()) ?? mod.price;
-      modifierTotal += realModPrice;
-      return { name: mod.name, price: realModPrice };
+      const realModPrice = getModifierPrice(mod.name.toLowerCase());
+      if (realModPrice === undefined) {
+        console.warn(`[order] Unknown modifier rejected for ${item.id}: "${mod.name}"`);
+      }
+      const safePrice = realModPrice ?? 0;
+      modifierTotal += safePrice;
+      return { name: mod.name, price: safePrice };
     });
 
     const subtotal = (realUnitPrice + modifierTotal) * item.quantity;

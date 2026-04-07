@@ -1,5 +1,6 @@
 import { qdrant, C } from '../lib/qdrant'
 import rawMenu from '../data/menu.json'
+import { logger } from '../lib/logger'
 
 const MENU_POINT_ID = 1
 const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
@@ -24,7 +25,7 @@ export async function getMenuData(): Promise<object> {
       return cachedMenu
     }
   } catch {
-    console.warn('[menu] Qdrant fetch failed, using local file')
+    logger.warn('menu', 'Qdrant fetch failed, using local file')
   }
 
   // Fallback: seed from local file and store in Qdrant
@@ -46,5 +47,5 @@ export async function seedMenu(data: object): Promise<void> {
   })
   cachedMenu = data
   cacheExpiry = Date.now() + CACHE_TTL
-  console.log('[menu] seeded menu to Qdrant')
+  logger.info('menu', 'Seeded menu to Qdrant')
 }

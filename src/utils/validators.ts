@@ -116,11 +116,13 @@ export function buildValidatorIndex(menuData: any): void {
   if (menu.arma_tu_shawarma?.step_3_toppings?.extras) {
     for (const e of menu.arma_tu_shawarma.step_3_toppings.extras) {
       modifierIndex.set(e.name.toLowerCase(), e.price)
+      modifierIndex.set(`shawarma:${e.name.toLowerCase()}`, e.price)
     }
   }
   if (menu.bowls?.arma_tu_bowl?.toppings_extra) {
     for (const e of menu.bowls.arma_tu_bowl.toppings_extra) {
       modifierIndex.set(e.name.toLowerCase(), e.price)
+      modifierIndex.set(`bowl:${e.name.toLowerCase()}`, e.price)
     }
   }
   if (menu.bowls?.arma_tu_bowl) {

@@ -1,16 +1,20 @@
 import { QdrantClient } from '@qdrant/js-client-rest'
+import { logger } from './logger'
 
 export const qdrant = new QdrantClient({
   url: process.env.QDRANT_URL!,
   apiKey: process.env.QDRANT_API_KEY!,
 })
 
+// Production uses harissa_*, dev/test use dev_harissa_* / test_harissa_*
+const ENV_PREFIX = process.env.NODE_ENV === 'production' ? '' : `${process.env.NODE_ENV ?? 'dev'}_`
+
 export const C = {
-  menu: 'harissa_menu',
-  sessions: 'harissa_sessions',
-  orders: 'harissa_orders',
-  reservations: 'harissa_reservations',
-} as const
+  menu: `${ENV_PREFIX}harissa_menu`,
+  sessions: `${ENV_PREFIX}harissa_sessions`,
+  orders: `${ENV_PREFIX}harissa_orders`,
+  reservations: `${ENV_PREFIX}harissa_reservations`,
+}
 
 const COLLECTIONS = Object.values(C)
 const VECTOR_CONFIG = { size: 1, distance: 'Cosine' as const }
@@ -27,7 +31,7 @@ export async function bootstrapCollections(): Promise<void> {
   for (const name of COLLECTIONS) {
     if (!names.has(name)) {
       await qdrant.createCollection(name, { vectors: VECTOR_CONFIG })
-      console.log(`[qdrant] created collection: ${name}`)
+      logger.info('qdrant', `Created collection: ${name}`)
     }
   }
 }
